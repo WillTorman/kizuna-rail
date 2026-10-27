@@ -1,3 +1,4 @@
+import { yenToUsd } from '../includes/helpers.js';
 import { createConfirmation, getScheduleById, getTicketOptionsForRoute } from '../models/model.js';
 
 const bookingPage = async (req, res) => {
@@ -10,7 +11,8 @@ const bookingPage = async (req, res) => {
     res.render('routes/book', {
         title: 'Book Trip',
         schedule,
-        ticketOptions
+        ticketOptions,
+        yenToUsd
     });
 };
 

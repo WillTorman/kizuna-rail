@@ -62,13 +62,8 @@
         <div class="route-operating">
             <h2>Operating Schedule</h2>
             <div class="months-grid">
-                <% const monthNames = [
-                    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-                ]; %>
-
                 <% details.operatingMonths.forEach(function(month) { %>
-                <span class="month-badge"><%= monthNames[month - 1] %></span>
+                <span class="month-badge"><%= getMonthAbbreviation(month) %></span>
                 <% }); %>
             </div>
         </div>
