@@ -1,3 +1,23 @@
+.filters {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+    .filters {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .routes-grid {
     display: flex;
     flex-direction: column;

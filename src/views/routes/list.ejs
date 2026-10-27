@@ -1,22 +1,26 @@
 <%- include('../partials/header') %>
 <h1><%- title %></h1>
 
-<div id="filters">
-    Search by Region:
-    <select id="region-filter">
-        <option value="all">All Regions</option>
-        <% regions.forEach((region) => { %>
-            <option value="<%= region %>" <%= query.region === region ? 'selected' : '' %>><%= region.charAt(0).toUpperCase() + region.slice(1) %></option>
-        <% }); %>
-    </select>
+<div class="filters">
+    <label class="filter" for="region-filter">
+        Search by Region:
+        <select id="region-filter">
+            <option value="all">All Regions</option>
+            <% regions.forEach((region) => { %>
+                <option value="<%= region %>" <%= query.region === region ? 'selected' : '' %>><%= region.charAt(0).toUpperCase() + region.slice(1) %></option>
+            <% }); %>
+        </select>
+    </label>
 
-    Search by Season:
-    <select id="season-filter">
-        <option value="all">Any Season</option>
-        <% seasons.forEach((season) => { %>
-            <option value="<%= season %>" <%= query.season === season ? 'selected' : '' %>><%= season.charAt(0).toUpperCase() + season.slice(1) %></option>
-        <% }); %>
-    </select>
+    <label class="filter" for="season-filter">
+        Search by Season:
+        <select id="season-filter">
+            <option value="all">Any Season</option>
+            <% seasons.forEach((season) => { %>
+                <option value="<%= season %>" <%= query.season === season ? 'selected' : '' %>><%= season.charAt(0).toUpperCase() + season.slice(1) %></option>
+            <% }); %>
+        </select>
+    </label>
 </div>
 
 <div class="routes-grid">
